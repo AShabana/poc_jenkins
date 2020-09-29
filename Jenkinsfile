@@ -1,7 +1,7 @@
 pipeline {
     agent any
     stages {
-        stage('Test') {
+        stage('Run The Ansible Playbook') {
             steps {
                 sh 'echo "Fail!"; exit 1'
             }
@@ -15,7 +15,8 @@ pipeline {
             echo 'This will run only if successful'
         }
         failure {
-            echo 'This will run only if failed'
+            echo 'Failed'
+            echo 'Lets Send Email.......'
         }
         unstable {
             echo 'This will run only if the run was marked as unstable'
