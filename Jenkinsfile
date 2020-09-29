@@ -3,7 +3,7 @@ pipeline {
     stages {
         stage('Run The Ansible Playbook') {
             steps {
-                sh 'echo "Fail!"; exit 1'
+                sh 'echo "Sucess!"; exit 0'
             }
         }
     }
